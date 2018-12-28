@@ -6,7 +6,7 @@
 //  Copyright © 2018 OleksandrFilippov. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 import CoreData
 
@@ -23,9 +23,34 @@ class ContactVC: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        saveContact { (done) in
+            if done{
+                print("We need to return new")
+                navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+            }else{
+                print("try again")
+            }
+        }
     }
     
-    func saveContact(){
+    func saveContact(complition: (_ finished: Bool) -> ()){
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
+        let contact = Contact(context: managedContext)
+        contact.name = nameTextField.text
+        contact.surname = surnameTextField.text
+        contact.city = cityTextField.text
+        contact.number = numberTestField.text
+        
+        do{
+            try managedContext.save()
+            print("Data saved")
+            complition(true)
+        }catch{
+            print("Faild to save", error.localizedDescription)
+            complition(false)
+        }
         
     }
 }
+
