@@ -27,6 +27,10 @@ class ContactTableViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setData()
+        tableView.reloadData()
+    }
+    func setData(){
         fetchData { (done) in
             if done{
                 print("Data is ready to used")
@@ -37,7 +41,6 @@ class ContactTableViewController: UIViewController {
                 }
             }
         }
-        tableView.reloadData()
     }
     
     func callDelegates() {
@@ -59,6 +62,22 @@ extension ContactTableViewController: UITableViewDelegate, UITableViewDataSource
         cell.subtitleLabel.text = "\(contact.number!) \(contact.city!)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.deleteData(indexPath: indexPath)
+            self.setData()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        return [deleteAction]
+    }
 }
 
 extension ContactTableViewController{
@@ -74,5 +93,16 @@ extension ContactTableViewController{
             complition(false)
         }
         
+    }
+    func deleteData(indexPath: IndexPath){
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
+        managedContext.delete(ContactArray[indexPath.row])
+        
+        do{
+            try managedContext.save()
+            print("Data delete")
+        }catch{
+            print("Faild to delete data", error.localizedDescription)
+        }
     }
 }
