@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C3ED68E21D6679A00BFF569 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ED68D21D6679A00BFF569 /* TableViewCell.swift */; };
+		2C5480E121DD9E7A0041DD34 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5480E021DD9E7A0041DD34 /* ContactViewController.swift */; };
 		2C5BCD9921D51EA800BEAEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BCD9821D51EA800BEAEF9 /* AppDelegate.swift */; };
 		2C5BCD9E21D51EA800BEAEF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5BCD9C21D51EA800BEAEF9 /* Main.storyboard */; };
 		2C5BCDA121D51EA800BEAEF9 /* ContactApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BCD9F21D51EA800BEAEF9 /* ContactApp.xcdatamodeld */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2C3ED68D21D6679A00BFF569 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2C5480E021DD9E7A0041DD34 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		2C5BCD9521D51EA800BEAEF9 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5BCD9821D51EA800BEAEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C5BCD9D21D51EA800BEAEF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				2C5BCDB021D51F6900BEAEF9 /* ContactTableViewController.swift */,
 				2CF16B8521D5781500B16650 /* ContactVC.swift */,
+				2C5480E021DD9E7A0041DD34 /* ContactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				2C3ED68E21D6679A00BFF569 /* TableViewCell.swift in Sources */,
 				2C5BCD9921D51EA800BEAEF9 /* AppDelegate.swift in Sources */,
 				2CF16B8621D5781500B16650 /* ContactVC.swift in Sources */,
+				2C5480E121DD9E7A0041DD34 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

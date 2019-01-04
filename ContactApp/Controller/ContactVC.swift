@@ -17,6 +17,7 @@ class ContactVC: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var numberTestField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,6 @@ class ContactVC: UIViewController {
         contact.surname = surnameTextField.text
         contact.city = cityTextField.text
         contact.number = numberTestField.text
-        
         do{
             try managedContext.save()
             print("Data saved")
@@ -50,7 +50,6 @@ class ContactVC: UIViewController {
             print("Faild to save", error.localizedDescription)
             complition(false)
         }
-        
     }
 }
 
