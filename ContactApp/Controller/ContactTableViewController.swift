@@ -17,6 +17,7 @@ class ContactTableViewController: UIViewController {
     var ContactArray = [Contact]()
    
     let cellid = "ContactCell"
+    var valueToPass: String!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -105,4 +106,19 @@ extension ContactTableViewController{
             print("Faild to delete data", error.localizedDescription)
         }
     }
+    //Mark: - Add to next Controller
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("you selected cell \(indexPath.row)")
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
+        let contact = ContactArray[indexPath.row]
+        vc.nameContact = contact.name
+        vc.surnameContact = contact.surname
+        vc.cityContact = contact.city
+        vc.numberContact = contact.number
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

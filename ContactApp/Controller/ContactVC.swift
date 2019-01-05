@@ -17,7 +17,7 @@ class ContactVC: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var numberTestField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var saveButtonOutlet: UIButton!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,7 @@ class ContactVC: UIViewController {
             }
         }
     }
+    // MARK: - Saving
     
     func saveContact(complition: (_ finished: Bool) -> ()){
         guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
@@ -51,5 +52,6 @@ class ContactVC: UIViewController {
             complition(false)
         }
     }
+    
 }
 

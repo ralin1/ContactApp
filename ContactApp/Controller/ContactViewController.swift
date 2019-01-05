@@ -10,21 +10,27 @@ import UIKit
 
 class ContactViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    var nameContact: String?
+    var surnameContact: String?
+    var cityContact: String?
+    var numberContact: String?
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = nameContact?.description
+        surnameLabel.text = surnameContact?.description
+        cityLabel.text = cityContact?.description
+        numberLabel.text = numberContact?.description
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
