@@ -114,6 +114,9 @@
                                 <color key="backgroundColor" red="0.59823716540000005" green="0.67760733279999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="call"/>
+                                <connections>
+                                    <action selector="callingNumber:" destination="NSr-m8-ahU" eventType="touchUpInside" id="xjY-2F-J94"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

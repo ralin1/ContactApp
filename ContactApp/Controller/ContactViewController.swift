@@ -31,6 +31,24 @@ class ContactViewController: UIViewController {
     }
     
     
+    @IBAction func callingNumber(_ sender: Any) {
+        print("asd")
+        if let number = numberContact?.description{
+            if let url = URL(string: "tel://\(number)"),
+                UIApplication.shared.canOpenURL(url) {
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler:nil)
+                    print("call")
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            } else {
+                print("cant call to \(number)")
+            }
+        }
+        
+    }
+    
 
    
 }
