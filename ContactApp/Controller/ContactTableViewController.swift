@@ -23,7 +23,7 @@ class ContactTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.isEditing = true
         callDelegates()
     }
     
