@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1F753624436C9D00358A7E /* ContactTableViewController + fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F753524436C9D00358A7E /* ContactTableViewController + fetchData.swift */; };
 		2C3ED68E21D6679A00BFF569 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ED68D21D6679A00BFF569 /* TableViewCell.swift */; };
 		2C5480E121DD9E7A0041DD34 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5480E021DD9E7A0041DD34 /* ContactViewController.swift */; };
 		2C5BCD9921D51EA800BEAEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BCD9821D51EA800BEAEF9 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1F753524436C9D00358A7E /* ContactTableViewController + fetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactTableViewController + fetchData.swift"; sourceTree = "<group>"; };
 		2C3ED68D21D6679A00BFF569 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2C5480E021DD9E7A0041DD34 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		2C5BCD9521D51EA800BEAEF9 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1F753424436C3B00358A7E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2C1F753524436C9D00358A7E /* ContactTableViewController + fetchData.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2C3ED68F21D672A400BFF569 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5BCD9821D51EA800BEAEF9 /* AppDelegate.swift */,
+				2C1F753424436C3B00358A7E /* Extension */,
 				2C3ED69021D672B600BFF569 /* Controller */,
 				2C3ED68F21D672A400BFF569 /* View */,
 				2C5BCD9C21D51EA800BEAEF9 /* Main.storyboard */,
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1F753624436C9D00358A7E /* ContactTableViewController + fetchData.swift in Sources */,
 				2C5BCDA121D51EA800BEAEF9 /* ContactApp.xcdatamodeld in Sources */,
 				2C5BCDB121D51F6900BEAEF9 /* ContactTableViewController.swift in Sources */,
 				2C3ED68E21D6679A00BFF569 /* TableViewCell.swift in Sources */,
